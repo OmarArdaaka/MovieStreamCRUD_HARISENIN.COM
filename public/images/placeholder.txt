@@ -1,0 +1,2 @@
+Ganti file-file di folder ini dengan gambar-gambar film yang ingin ditampilkan.
+Pastikan nama file gambar sesuai dengan yang didefinisikan di kode.
