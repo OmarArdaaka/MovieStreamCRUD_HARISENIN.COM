@@ -9,7 +9,7 @@ const initialMovies = [
     year: 2019, 
     watched: false, 
     inWatchlist: false,
-    image: '/images/avengers.jpg'  // Pastikan file ini ada di folder public/images
+    image: '/images/avengers.jpg'
   },
   { 
     id: 2, 
@@ -18,7 +18,7 @@ const initialMovies = [
     year: 2010, 
     watched: false, 
     inWatchlist: false,
-    image: '/images/inception.jpg'  // Pastikan file ini ada di folder public/images
+    image: '/images/inception.jpg'
   },
   { 
     id: 3, 
@@ -27,7 +27,7 @@ const initialMovies = [
     year: 2008, 
     watched: false, 
     inWatchlist: false,
-    image: '/images/dark-knight.jpg'  // Pastikan file ini ada di folder public/images
+    image: '/images/dark-knight.jpg'
   },
 ];
 
@@ -73,7 +73,6 @@ function App() {
       setMovies([...movies, movieData]);
     }
 
-    // Reset form
     setNewMovie({ 
       title: '', 
       genre: '', 
@@ -100,7 +99,6 @@ function App() {
     setEditingId(movie.id);
   };
 
-  // CRUD untuk Daftar Tontonan
   const toggleWatchlist = (movieId) => {
     setMovies(movies.map(movie => 
       movie.id === movieId 
@@ -126,8 +124,6 @@ function App() {
   return (
     <div className="app">
       <h1>Netflix Clone</h1>
-      
-      {/* Form Tambah/Edit Film */}
       <div className="movie-form">
         <h2>{editingId ? 'Edit Film' : 'Tambah Film Baru'}</h2>
         <form onSubmit={addMovie}>
@@ -182,8 +178,6 @@ function App() {
           )}
         </form>
       </div>
-
-      {/* Daftar Film */}
       <div className="movie-list">
         <h2>Daftar Film</h2>
         {movies.length === 0 ? (
@@ -234,8 +228,6 @@ function App() {
           </ul>
         )}
       </div>
-
-      {/* Daftar Tontonan */}
       <div className="watchlist">
         <h2>Daftar Tontonan Saya</h2>
         {watchlist.length === 0 ? (
